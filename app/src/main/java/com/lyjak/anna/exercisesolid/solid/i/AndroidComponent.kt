@@ -1,10 +1,6 @@
 package com.lyjak.anna.exercisesolid.solid.i
 
-class AndroidComponent : Component {
-
-    override fun mouseover(event: String) {
-        throw UnsupportedOperationException("mouse click not supported")
-    }
+class AndroidComponent : Touchable, Swipable, Validatable {
 
     override fun touch(event: String) {
         println("Touch Event Fired")
@@ -15,7 +11,7 @@ class AndroidComponent : Component {
     }
 
     override fun validate() {
-        println("All UI i valid")
+        println("All UI is valid")
     }
 
 }
