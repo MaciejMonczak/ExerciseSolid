@@ -1,17 +1,8 @@
 package com.lyjak.anna.exercisesolid.solid.l
 
-class Square : Rectangle() {
+class Square(var sideLength: Double = 0.0) : Shape {
+    override val area: Double
+        get() = sideLength * sideLength
 
-    override var height: Double
-        get() = throw IllegalAccessException()
-        set(height) {
-            throw IllegalAccessException()
-        }
-
-    override var width: Double
-        get() = throw IllegalAccessException()
-        set(width) {
-            throw IllegalAccessException()
-        }
-
+    // Or better stay with Rectangle inheritance and set sideLength to height and width in constructor?
 }
